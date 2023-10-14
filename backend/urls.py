@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('frontend/', views.members, name='frontend'),
+    path('backend/', views.members, name='backend'),
 ]
