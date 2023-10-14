@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def frontend(request):
-    return HttpResponse("Frontend!")
+  template = loader.get_template('kepha.html')
+  return HttpResponse(template.render())
