@@ -1,0 +1,118 @@
+<div class="sticky">
+  <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+  <div class="app-sidebar">
+      <div class="side-header">
+          <a class="header-brand1" href="{% url 'dashboard'%}">
+           <h4>{{ contacts.name }}</h4> 
+          </a>
+          <!-- LOGO -->
+      </div>
+      <div class="main-sidemenu">
+          <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg"
+                  fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+              </svg></div>
+          <ul class="side-menu">
+              <li class="sub-category">
+                  <h3>Main</h3>
+              </li>
+              <li class="slide">
+                  <a class="side-menu__item" data-bs-toggle="slide" href="{% url 'dashboard'%}"><i
+                          class="side-menu__icon fe fe-home"></i><span
+                          class="side-menu__label">Dashboard</span></a>
+              </li>
+              <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href=" {% url 'contact_update' pk=1 %}"><i
+                        class="side-menu__icon  fe fe-user"></i><span
+                        class="side-menu__label">Personal Information</span></a>
+            </li>
+            <!-- <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href=" {% url 'contact_update' pk=1 %}"><i
+                        class="side-menu__icon fe fe-home"></i><span
+                        class="side-menu__label">Skills</span></a>
+            </li> -->
+              <li class="slide">
+                  <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                          class="side-menu__icon fe fe-award"></i><span
+                          class="side-menu__label">Skills</span><i
+                          class="angle fe fe-chevron-right"></i></a>
+                  <ul class="slide-menu">
+                    <li><a href=" {% url 'skill_create' %}" class="slide-item">Add Skills</a></li>
+                      <li><a href=" {% url 'skill_list'%}" class="slide-item">Manage Skills</a></li>
+                     
+                  </ul>
+              </li>
+              <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                        class="side-menu__icon fe fe-shopping-cart"></i><span
+                        class="side-menu__label">Services</span><i
+                        class="angle fe fe-chevron-right"></i></a>
+                <ul class="slide-menu">
+                  <li><a href=" {% url 'service_create' %}" class="slide-item">Add services</a></li>
+                    <li><a href=" {% url 'service_list'%}" class="slide-item">Manage Services</a></li>
+                   
+                </ul>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                        class="side-menu__icon fe fe-check-square"></i><span
+                        class="side-menu__label">Facts</span><i
+                        class="angle fe fe-chevron-right"></i></a>
+                <ul class="slide-menu">
+                  <li><a href=" {% url 'fact_create' %}" class="slide-item">Add fact</a></li>
+                    <li><a href=" {% url 'fact_list'%}" class="slide-item">Manage Facts</a></li>
+                   
+                </ul>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                        class="side-menu__icon fe fe-package"></i><span
+                        class="side-menu__label">Projects</span><i
+                        class="angle fe fe-chevron-right"></i></a>
+                <ul class="slide-menu">
+                  <li><a href=" {% url 'project_create' %}" class="slide-item">Add project</a></li>
+                    <li><a href=" {% url 'project_list'%}" class="slide-item">Manage Project</a></li>
+                   
+                </ul>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                      class="side-menu__icon fe fe-users"></i><span
+                      class="side-menu__label">Testimonies</span><i
+                      class="angle fe fe-chevron-right"></i></a>
+              <ul class="slide-menu">
+                <li><a href=" {% url 'testimony_create' %}" class="slide-item">Add Testimony</a></li>
+                  <li><a href=" {% url 'testimony_list'%}" class="slide-item">Manage Testimonies</a></li>
+                 
+              </ul>
+          </li>
+          <li class="slide">
+            <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                    class="side-menu__icon fe fe-book-open"></i><span
+                    class="side-menu__label">Resume</span><i
+                    class="angle fe fe-chevron-right"></i></a>
+            <ul class="slide-menu">
+              <li><a href=" {% url 'summary_update' pk=1 %}" class="slide-item">Summary</a></li>
+                <li><a href=" {% url 'education_list'%}" class="slide-item">Education</a></li>
+                <li><a href=" {% url 'experience_list'%}" class="slide-item">Experience</a></li>
+                <!-- <li><a href=" {% url 'experience_list'%}" class="slide-item">Experience</a></li> -->
+            </ul>
+        </li>
+            <li class="slide">
+                <a class="side-menu__item" data-bs-toggle="slide" href=" {% url 'logout' %}"><i
+                        class="side-menu__icon  fe fe-alert-circle"></i><span
+                        class="side-menu__label"> Sign out</span></a>
+            </li> 
+            <li class="slide">
+              <a class="side-menu__item" data-bs-toggle="slide" href=" {% url 'messages_list'  %}"><i
+                      class="side-menu__icon  fe fe-envelope"></i><span
+                      class="side-menu__label">Messages</span></a>
+          </li>
+         
+          </ul>
+          <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                  width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+              </svg></div>
+      </div>
+  </div>
